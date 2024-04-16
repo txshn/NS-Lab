@@ -1,0 +1,34 @@
+./waf --run scratch/first
+
+NETANIM
+In allinone/netanim-3.0
+./NetAnim
+Anim
+
+
+    
+student@MIT-ICT-LAB9-18:/opt/ns-allinone-3.35/ns-3.35$ ./waf --run scratch/4node
+student@MIT-ICT-LAB9-18:/opt/ns-allinone-3.35/ns-3.35$ cd ..
+student@MIT-ICT-LAB9-18:/opt/ns-allinone-3.35$ cd netanim-3.108/
+student@MIT-ICT-LAB9-18:/opt/ns-allinone-3.35/netanim-3.108$ ./NetAnim
+
+
+SAVE ALL THE FILES IN ns-allinone-3.35/ns-3.30
+
+
+awk -f pdf.awk tcp-bulk-send.tr
+awk -f delay.awk tcp-bulk-send.tr
+awk -f throughput.awk tcp-bulk-send.tr
+
+awk -f pdf-graph.awk tcp-bulk-send.tr > graph-pdf
+gnuplot pdf-graphcode
+
+awk -f delay-graph.awk tcp-bulk-send.tr > graph-delay
+gnuplot delay-graphcode
+
+awk -f throughout-graph.awk tcp-bulk-send.tr > graph-throughout
+gnuplot throughout-graphcode
+
+
+//awk -f tcp-bulk-send.tr pdf.awk
+//awk -f test.awk test.tr	
